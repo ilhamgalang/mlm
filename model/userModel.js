@@ -16,8 +16,7 @@ const UserSchema = new Schema({
   },
   refId: {
   	type: String,
-  	trim: true,
-  	required: true
+  	trim: true
   }
 });
 
