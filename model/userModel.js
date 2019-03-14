@@ -13,10 +13,6 @@ const UserSchema = new Schema({
   	type: String,
   	trim: true,
   	required: true
-  },
-  refId: {
-  	type: String,
-  	trim: true
   }
 });
 
