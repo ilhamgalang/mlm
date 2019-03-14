@@ -3,6 +3,7 @@ const router = express.Router();
 
 const genreController = require('./controller/genre');
 const artisController = require('./controller/artis');
+const userController = require('./controller/user');
 
 // genre
 router.get('/genres', genreController.getAll);
@@ -17,5 +18,8 @@ router.get('/artis', artisController.getAll);
 router.post('/artis/upload', artisController.uploadImg);
 router.post('/artis', artisController.create);
 router.delete('/artis/:id', artisController.deleteById);
+
+// user
+router.post('/user', userController.create);
 
 module.exports = router;
