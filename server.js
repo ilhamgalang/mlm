@@ -102,5 +102,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port, function(){
-  console.log('Node server listening on port 96');
+  console.log('Node server listening on port ' + port);
 });

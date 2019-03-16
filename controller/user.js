@@ -8,6 +8,12 @@ exports.create = function (req, res, next) {
   }, function (err, result) {
     if (err) {
       next(err);
+    } else {
+      res.json({
+        isSuccess: true,
+        message: "Register successfully!",
+        data: null
+      });    
     }
   });
   relasiModel.create({
@@ -21,11 +27,6 @@ exports.create = function (req, res, next) {
       next(err);
     }
   });
-  res.json({
-    status: "success",
-    message: "Register successfully!",
-    data: null
-  });
 }
 
 exports.login = function (req, res, next) {
@@ -37,7 +38,7 @@ exports.login = function (req, res, next) {
     if (err) {
       next(err);
     } else {
-      if (result) {
+      if (!result) {
         res.json({
           isSuccess: false,
           data: result,
